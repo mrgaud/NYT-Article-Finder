@@ -3,7 +3,10 @@ angular.module('nytApp').controller('mainCtrl',function($scope, mainSrvc){
         mainSrvc.getArticles(term).then(function(response){
             console.log(response.data.response.docs);
             $scope.articles = response.data.response.docs
-            $scope.search = ''
         })
     }
+    mainSrvc.initArticles().then(function(response){
+        console.log(response.data.results);
+        $scope.popArts = response.data.results
+    })
 })

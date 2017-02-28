@@ -1,6 +1,6 @@
 <pop-article></pop-article>
 
-<div id="query-section" class="">
+<div id="query-section">
     <div class="row center-align">
         <form class="col s8 offset-s2">
             <h4>Find Articles</h4>
@@ -25,7 +25,7 @@
                     <label for="to">to</label>
                 </div>
 
-                <a id='search-button' ui-sref="results">Results</a>
+                <a id='search-button-home' ui-sref="results" ng-click='getArticles(search)'>Results</a>
 
             </div>
         </form>

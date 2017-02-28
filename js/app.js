@@ -8,6 +8,10 @@ angular.module('nytApp',['ui.router']).config(function($stateProvider, $urlRoute
         url:'/results',
         templateUrl:'views/resultTmpl.html'
     })
+    .state('about',{
+        url:'/about',
+        templateUrl:'views/aboutTmpl.html'
+    })
 
     $urlRouterProvider.otherwise('/')
 })
