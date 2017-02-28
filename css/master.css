@@ -3,3 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+cite{
+    font-size: .5em;
+    color: rgb(191, 195, 189);
+}

@@ -1,1 +1,7 @@
-{{popArts}}
+<div id='pop-arts-cards'>
+    <div id="pop-card" ng-repeat='popArt in $ctrl.popArts track by $index'>
+        <img class='pop-images' ng-src="{{popArt.media[0]['media-metadata'][0].url}}" alt="">
+
+        <p>{{popArt.title}}</p>
+    </div>
+</div>

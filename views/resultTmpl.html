@@ -1,15 +1,15 @@
 <div class="col s12 m7" ng-repeat='article in articles track by $index'>
-  <h2 class="header">{{article.headline.main}}</h2>
+  <h5 class="header">{{article.headline.main}} <cite>-{{article.byline.original}}</cite></h5>
   <div class="card horizontal">
     <div class="card-image">
       <img ng-src="https://nytimes.com/{{article.multimedia[0].url}}">
     </div>
     <div class="card-stacked">
       <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.</p>
+        <p>{{article.lead_paragraph?article.lead_paragraph:article.snippet}}</p>
       </div>
       <div class="card-action">
-        <a ui-sref='#'>view</a>
+        <a ng-click=''>view</a>
       </div>
     </div>
   </div>
