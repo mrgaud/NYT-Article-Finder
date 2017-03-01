@@ -1,0 +1,7 @@
+.input-field input[type=text]:focus  {
+     color: #000;
+   }
+#nav-search:focus{
+    color: :#000;
+    background-color: #FFFFFF;
+}

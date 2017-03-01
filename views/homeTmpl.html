@@ -9,7 +9,7 @@
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">search</i>
-                    <input id="icon_prefix" type="text" class="validate" ng-model='search'>
+                    <input id="icon_prefix" type="text" class="validate" ng-model='search' ng-keydown='$event.which === 13 && getArticles(search)'>
                     <label for="icon_prefix">Search here</label>
                 </div>
 
@@ -32,3 +32,5 @@
         </form>
     </div>
 </div>
+
+<footer-comp id="absolutify"></footer-comp>

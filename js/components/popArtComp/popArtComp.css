@@ -5,12 +5,17 @@
     /*max-height: 8%;*/
     box-shadow: 1px 1px 4px #000;
     border-radius: .2em;
+    margin-bottom: 5em;
 }
 #pop-card{
+    font-size: .8em;
+    max-width: 200px;
+    max-height: 200px;
     display: inline-block;
-    padding: 1em;
+    padding-left: .2em;
+    padding-right: .2em;
 }
 .pop-images{
-    height: 10em;
-    width: 10em;
+    height: 8rem;
+    width: 10rem;
 }

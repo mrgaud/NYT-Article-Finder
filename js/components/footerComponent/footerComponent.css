@@ -1,0 +1,18 @@
+#absolutify{
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    bottom: -10em;;
+}
+#strechify{
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    color: white;
+}
+#contact-me{
+    position: relative;
+    float: right;
+    padding-right: 1em;
+    color: white;
+}

@@ -4,4 +4,5 @@ $(document).ready(function() {
         selectYears: 100, // Creates a dropdown of 15 years to control year
         max: new Date()
     });
+    $(".button-collapse").sideNav();;
 })

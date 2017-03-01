@@ -5,24 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>NeYoTi</title>
+
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href='js/components/popArtComp/popArtComp.css'>
     <link rel="stylesheet" href="js/components/navComponent/navComponent.css">
+    <link rel="stylesheet" href="js/components/footerComponent/footerComponent.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href='js/components/popArtComp/popArtComp.css'>
+
+    <link rel="stylesheet" href="css/materialOverride.css">
 </head>
 
 <body>
     <div ng-app='nytApp'>
         <div ng-controller='mainCtrl'>
             <nav>
-                <nav-component></nav-component>
+                <nav-component get-articles='getArticles(navi)'></nav-component>
             </nav>
-            <pop-article pop-arts='popArts'></pop-article>
             <div class="container">
+                <pop-article pop-arts='popArts'></pop-article>
                 <ui-view></ui-view>
             </div>
         </div>
@@ -35,12 +40,14 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://use.fontawesome.com/568b763205.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js" charset="utf-8"></script>
     <!-- app pages -->
     <script src="js/app.js" charset="utf-8"></script>
     <script src="js/mainCtrl.js" charset="utf-8"></script>
     <script src="js/mainSrvc.js" charset="utf-8"></script>
     <script src="js/components/navComponent/navComponent.js" charset="utf-8"></script>
     <script src="js/components/popArtComp/popArtComp.js" charset="utf-8"></script>
+    <script src="js/components/footerComponent/footerComponent.js" charset="utf-8"></script>
     <!-- scripts -->
     <script src="js/scripts.js" charset="utf-8"></script>
 

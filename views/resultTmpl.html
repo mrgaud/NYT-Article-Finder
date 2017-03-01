@@ -9,7 +9,8 @@
     </div>
     <div class="card-stacked">
       <div class="card-content">
-        <p>{{article.lead_paragraph?article.lead_paragraph:article.snippet}}</p>
+        <p>{{article.lead_paragraph?article.lead_paragraph:article.snippet}}</p><br>
+        <p>{{article.pub_date}}</p>
       </div>
       <div class="card-action">
         <a ng-href='{{article.web_url}}' target="_blank">view</a>
@@ -17,3 +18,4 @@
     </div>
   </div>
 </div>
+<footer-comp id="strechify"></footer-comp>

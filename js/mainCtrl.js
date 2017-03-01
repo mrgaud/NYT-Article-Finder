@@ -1,4 +1,4 @@
-angular.module('nytApp').controller('mainCtrl',function($scope, mainSrvc){
+angular.module('nytApp').controller('mainCtrl',function($scope,$state, mainSrvc){
     $scope.getArticles = function(term){
         if(term === undefined){
             return
@@ -6,6 +6,11 @@ angular.module('nytApp').controller('mainCtrl',function($scope, mainSrvc){
         mainSrvc.getArticles(term).then(function(response){
             console.log(response.data.response.docs);
             $scope.articles = response.data.response.docs
+            console.log(moment($scope.articles[0].pub_date).fromNow());
+            $scope.articles.map(function(x){
+                x.pub_date = moment(x.pub_date).fromNow();
+            })
+            $state.go('results')
         })
     }
     mainSrvc.initArticles().then(function(response){
