@@ -13,21 +13,17 @@
                     <label for="icon_prefix">Search here</label>
                 </div>
 
-                <h5>When?(optional)</h5>
+                <h5>When?(optional From-to)</h5>
                 <div class="input-field col s12 m4 offset-m2">
                     <i class="fa fa-calendar prefix"></i>
-                    <input placeholder="yyyy/mm/dd" id="from" type="text" class="validate" ng-model='from'>
-                    <label for="from">From</label>
+                    <input placeholder="From Year" type="number" class="" ng-model='from'>
                 </div>
 
                 <div class="input-field col s12 m4">
                     <i class="fa fa-calendar prefix"></i>
-                    <input placeholder="yyyy/mm/dd" id="to" type="text" class="validate" ng-model='to'>
-                    <label for="to">to</label>
+                    <input placeholder="To Year" type="number" class="validate" ng-model='to'  />
                 </div>
-
-                <a id='search-button-home' ui-sref="results" ng-click='getArticles(search)'>Results</a>
-
+                <a id='search-button-home' ui-sref="results" ng-click='getArticles(search,from,to)'>Results</a>
             </div>
         </form>
     </div>
