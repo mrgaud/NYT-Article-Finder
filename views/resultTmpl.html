@@ -4,14 +4,15 @@
   <h5 class="header">{{article.headline.main}} <cite>-{{article.byline.original}}</cite></h5>
   <div class="card horizontal">
     <div class="card-image">
-      <img ng-src="https://nytimes.com/{{article.multimedia[0].url}}">
+      <img ng-src="https://nytimes.com/{{article.multimedia[0].url?article.multimedia[0].url:''}}" onerror="this.src='https://pmcdeadline2.files.wordpress.com/2016/10/the-new-york-times-logo-featured.jpg?w=446&h=299&crop=1'"
+      style="max-height: 150px;">
     </div>
     <div class="card-stacked">
       <div class="card-content">
         <p>{{article.lead_paragraph?article.lead_paragraph:article.snippet}}</p>
       </div>
       <div class="card-action">
-        <a ng-click=''>view</a>
+        <a ng-href='{{article.web_url}}' target="_blank">view</a>
       </div>
     </div>
   </div>
