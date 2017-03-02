@@ -1,21 +1,23 @@
 <!-- <pop-article pop-arts='popArts'></pop-article> -->
-<h2>Results:</h2>
-<div class="col s12 m7" ng-repeat='article in articles track by $index'>
-  <h5 class="header">{{article.headline.main}} <cite>-{{article.byline.original}}</cite></h5>
-  <div class="card horizontal">
-    <div class="card-image">
-      <img ng-src="https://nytimes.com/{{article.multimedia[0].url?article.multimedia[0].url:''}}" onerror="this.src='https://pmcdeadline2.files.wordpress.com/2016/10/the-new-york-times-logo-featured.jpg?w=446&h=299&crop=1'"
-      style="max-height: 150px;">
+<!-- <h2>Results:</h2> -->
+<div class="row">
+    <div class="col s12 m8 offset-m2" ng-repeat='article in articles track by $index'>
+        <h5 class="header">{{article.headline.main}} </br><cite>-{{article.byline.original}}</cite></h5>
+        <div class="card horizontal hoverable">
+            <div class="card-image">
+                <img ng-src="https://nytimes.com/{{article.multimedia[1].url?article.multimedia[1].url:''}}" onerror="this.src='https://pmcdeadline2.files.wordpress.com/2016/10/the-new-york-times-logo-featured.jpg?w=446&h=299&crop=1'" style="max-height: 150px;">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p>{{article.lead_paragraph?article.lead_paragraph.slice(0,200)+'...':article.snippet.slice(0,140)}}</p><br>
+                    <p>{{article.pub_date}}</p>
+                </div>
+                <div class="card-action">
+                    <a ng-href='{{article.web_url}}' target="_blank">View Full Article</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-stacked">
-      <div class="card-content">
-        <p>{{article.lead_paragraph?article.lead_paragraph:article.snippet}}</p><br>
-        <p>{{article.pub_date}}</p>
-      </div>
-      <div class="card-action">
-        <a ng-href='{{article.web_url}}' target="_blank">view</a>
-      </div>
-    </div>
-  </div>
 </div>
+
 <footer-comp id="strechify" class="hide-on-small-only"></footer-comp>

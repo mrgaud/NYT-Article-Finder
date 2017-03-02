@@ -1,4 +1,8 @@
 #pop-arts-cards{
+    /*position: static;;*/
+    /*margin-left:;*/
+    /*margin-top: .1em;*/
+    /*width: 100vw;*/
     display: flex;
     overflow-y: scroll;
     overflow-x: scroll;
@@ -8,19 +12,24 @@
     margin-bottom: 5em;
 }
 #pop-card{
+    border: 1px solid #B7BBB4;
+    text-align: center;
+    color: black;
     cursor: pointer;
     font-size: .8em;
     max-width: 200px;
     max-height: 200px;
     display: inline-block;
-    padding-left: .2em;
-    padding-right: .2em;
+    padding-left: .3em;
+    padding-right: .3em;
+    padding-top: .1em;
+    padding-bottom: .1em;
 }
 .pop-images{
     height: 8rem;
     width: 10rem;
 }
 #pop-card:hover{
-    opacity: .7;
+    opacity: .8;
     text-decoration: underline;
 }

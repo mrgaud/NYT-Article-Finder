@@ -27,10 +27,13 @@
             <nav>
                 <nav-component get-articles='getArticles(navi)'></nav-component>
             </nav>
-            <div class="container">
-                <pop-article pop-arts='popArts'></pop-article>
-                <ui-view></ui-view>
+            <div class="row">
+                <div class="col s12">
+                    <pop-article pop-arts='popArts'></pop-article>
+                </div>
             </div>
+            <ui-view></ui-view>
+            <!-- </div> -->
         </div>
     </div>
 
