@@ -1,7 +1,7 @@
 <div id='pop-arts-cards'>
     <div id="pop-card" ng-repeat='popArt in $ctrl.popArts track by $index'>
         <a href="{{popArt.url}}" target="_blank">
-            <img class='pop-images' ng-src="{{popArt.media[0]['media-metadata'][0].url}}" alt="">
+            <img class='pop-images' ng-src="{{popArt.media[0]['media-metadata'][0].url}}" alt="" style="margin-top:.3em;">
             <p>{{popArt.title.slice(0,40)+'...'}}</p>
         </a>
     </div>

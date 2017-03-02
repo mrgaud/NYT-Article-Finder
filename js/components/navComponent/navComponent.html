@@ -10,7 +10,6 @@
             <label for="first_name"></label>
         </div>
 
-
         <ul class="right hide-on-med-and-down">
             <li><a ui-sref='home'>Home</a></li>
             <li><a ui-sref='about'>About</a></li>
@@ -20,12 +19,12 @@
 
         <ul class="side-nav" id="mobile-demo">
             <li><input type="text" class="black-text" ng-model='mobileSearch' placeholder="search">
-
-            <button class="waves-effect waves-light btn center-align red darken-1" type="button" name="button" ng-click='$ctrl.getArticles({navi:mobileSearch})'>Search</button></li>
-            <li><a ui-sref='home'>Home</a></li>
-            <li><a ui-sref='about'>About</a></li>
-            <li><a href="https://www.facebook.com/NeYoTiQ/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/NeYoTi_Query"><i class="fa fa-twitter"></i></a></li>
+                <button class="waves-effect waves-light btn center-align red darken-1 col s12" type="button" name="button" ng-click='$ctrl.getArticles({navi:mobileSearch})'>Search</button>
+            </li>
+            <li class="col s12"><a ui-sref='home'>Home</a></li>
+            <li class="col s12"><a ui-sref='about'>About</a></li>
+            <li class="col s12"><a href="https://www.facebook.com/NeYoTiQ/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="col s12"><a href="https://twitter.com/NeYoTi_Query"><i class="fa fa-twitter"></i></a></li>
         </ul>
     </div>
 </nav>
