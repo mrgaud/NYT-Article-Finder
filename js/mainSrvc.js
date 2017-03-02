@@ -3,16 +3,16 @@ angular.module('nytApp').service('mainSrvc', function($http) {
     var key = '&api-key=6838472b375b4bf2a7cd2cba8a7ced19'
     this.getArticles = function(term, from, to) {
         if (!from && !to) {
-            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term +"&sort=newest"+ key)
+            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + key)
         }
         if (from && !to) {
-            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + from +"&sort=newest"+ key)
+            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + from + key)
         }
         if (!from && to) {
-            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + to +"&sort=newest"+ key)
+            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + to + key)
         }
         if (from && to) {
-            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + from +"&sort=newest"+ to + key)
+            return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + from + to + key)
         }
 
 

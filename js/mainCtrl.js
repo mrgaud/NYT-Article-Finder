@@ -21,6 +21,9 @@ angular.module('nytApp').controller('mainCtrl', function($scope, $state, mainSrv
         mainSrvc.getArticles(term, from, to).then(function(response) {
             console.log(response.data.response.docs);
             $scope.articles = response.data.response.docs
+            $scope.articles.sort(function(a,b){
+                return a.pub_date<b.pub_date
+            })
             $scope.articles.map(function(x) {
                 x.pub_date = moment(x.pub_date).fromNow();
             })
