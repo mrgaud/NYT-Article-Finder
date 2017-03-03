@@ -2,8 +2,9 @@
     <div class="row center-align">
 
         <!-- <pop-article pop-arts='popArts'></pop-article> -->
+        <weather-comp></weather-comp>
 
-        <form class="col s12 m8 offset-m2">
+        <form class="col s12 m8 l8 offset-m3 offset-l2">
             <h4>Find Articles</h4>
             <div class="row">
 
@@ -21,7 +22,7 @@
 
                 <div class="input-field col s12 m4">
                     <i class="fa fa-calendar prefix"></i>
-                    <input placeholder="To Year" type="number" class="validate" ng-model='to'  />
+                    <input placeholder="To Year" type="number" class="validate" ng-model='to' />
                 </div>
                 <a id='search-button-home' ui-sref="results" ng-click='getArticles(search,from,to)'>Results</a>
             </div>

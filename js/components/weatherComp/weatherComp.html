@@ -1,0 +1,9 @@
+<div id='stick-it-left' class="hide-on-small-only red darken-2 z-depth-3 white-text text-white" style="text-align:left;">
+    <div id='pad-it=out'>
+        <img ng-src="{{weatherData.icon_url}}">
+        <h4>{{weatherData.display_location.full}}</h4>
+        <p>{{"temp:"+ weatherData.temperature_string}}</p>
+        <p> {{"humidity:"+weatherData.relative_humidity}}</p>
+        <p>{{"wind: "+weatherData.wind_gust_mph}} {{weatherData.wind_dir}}</p>
+    </div>
+</div>

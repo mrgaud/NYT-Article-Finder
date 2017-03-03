@@ -14,17 +14,22 @@ angular.module('nytApp').service('mainSrvc', function($http) {
         if (from && to) {
             return $http.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + term + from + to + key)
         }
-
-
-
-
-
-
-
-
-
     }
+
     this.initArticles = function() {
-        return $http.get('https://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=6838472b375b4bf2a7cd2cba8a7ced19')
+        return $http.get('https://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=6838472b375b4bf2a7cd2cba8a7ced19')
     }
+
+    // navigator.geolocation.getCurrentPosition(function(position) {
+    //     console.log(position)
+    //     var posInt = setInterval(function(){
+    //         if(position){
+    //             this.lat = position.coords.latitude
+    //             this.lon = position.coords.longitude
+    //
+    //             clearInterval(posInt)
+    //             console.log(this.lat,' ',this.lon);
+    //         }
+    //     },1000)
+    // })
 })

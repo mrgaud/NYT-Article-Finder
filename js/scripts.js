@@ -9,4 +9,10 @@ $(document).ready(function() {
     $(".button-collapse").sideNav();
     $('.carousel').carousel();
 
+
 })
+$(document).ready(function(){
+    // setTimeout(function(){
+    //     $('.tooltipped').tooltip({delay: 50});
+    // },1000)
+});

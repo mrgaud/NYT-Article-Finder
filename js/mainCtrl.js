@@ -38,9 +38,9 @@ angular.module('nytApp').controller('mainCtrl', function($scope, $state, mainSrv
     mainSrvc.initArticles().then(function(response) {
         $scope.popArts = response.data.results
         console.log($scope.popArts);
+        setTimeout(function(){
+            $('.tooltipped').tooltip({delay: 50});
+        },100)
     })
     $scope.getArticles("fish")
-
-
-    // $scope.checkInput()
 })
