@@ -15,7 +15,7 @@ angular.module('nytApp').controller('mainCtrl', function($scope, $state, mainSrv
             to = false
         }else{
             console.log(to);
-            to = '&end_date='+to+'1230'
+            to = '&end_date='+to+'0101'
         }
         console.log(arguments);
         mainSrvc.getArticles(term, from, to).then(function(response) {
