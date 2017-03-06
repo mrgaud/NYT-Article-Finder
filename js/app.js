@@ -12,6 +12,10 @@ angular.module('nytApp',['ui.router']).config(function($stateProvider, $urlRoute
         url:'/about',
         templateUrl:'views/aboutTmpl.html'
     })
+    .state('res',{
+        url:'/res',
+        templateUrl:'views/resources.html'
+    })
 
     $urlRouterProvider.otherwise('/')
 })
