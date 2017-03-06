@@ -6,7 +6,7 @@ angular.module('nytApp').component('weatherComp', {
         var getWeatherData=function(lat,lon){
             $http({
                 method:"GET",
-                url:`http://api.wunderground.com/api/912edc7c39a1d423/conditions/q/${lat},${lon}.json`,
+                url:`https://api.wunderground.com/api/912edc7c39a1d423/conditions/q/${lat},${lon}.json`,
             }).then(function(response){
                 $scope.weatherData=response.data.current_observation
                 console.log($scope.weatherData);
