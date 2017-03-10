@@ -1,0 +1,33 @@
+{
+  "name": "nyt-article-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrgaud/NYT-Article-Finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrgaud/NYT-Article-Finder/issues"
+  },
+  "homepage": "https://github.com/mrgaud/NYT-Article-Finder#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "0.0.15",
+    "gulp-minify-css": "^1.2.4",
+    "pump": "^1.0.2",
+    "uglify-js": "^2.8.11"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-uglify": "^2.1.0"
+  }
+}
